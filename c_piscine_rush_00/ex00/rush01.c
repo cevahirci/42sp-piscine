@@ -11,29 +11,29 @@
 /* ************************************************************************** */
 
 void	ft_putchar(char a);
-
-void	rush(int x, int y)
+//x: u sütun    y: t satır
+void	rush(int u, int t)
 {
-	int p;
-	int r;
+	int y;
+	int x;
 
-	r = 1;
-	while (r <= y && x > 0)
+	x = 1;
+	while (x <= t && u > 0)
 	{
-		p = 1;
-		while (p <= x)
+		 = 1;
+		while (y <= u)
 		{
-			if ((p == 1 && r == 1) || (p == x && r == y && p != 1 && r != 1))
+			if ((y == 1 && x == 1) || (y == u && x == t && y != 1 && x != 1))
 				ft_putchar('/');
-			else if ((p == x && r == 1) || (p == 1 && r == y))
+			else if ((y == u && x == 1) || (y == 1 && x == t))
 				ft_putchar('\\');
-			else if ((p == 1) || (p == x) || (r == 1) || (r == y))
+			else if ((y == 1) || (y == u) || (x == 1) || (x == t))
 				ft_putchar('*');
 			else
 				ft_putchar(' ');
-			p++;
+			y++;
 		}
 		ft_putchar('\n');
-		r++;
+		x++;
 	}
 }
